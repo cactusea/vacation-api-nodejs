@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>휴가 관리 시스템</title>
+    <link rel="stylesheet" href="/style//main.css" type="text/css">
+    <script type='text/javascript' src="/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        document.getElementById('submitBtn').addEventListener('click', ()=>{
+          if(loginFormCheck()){
+            callLoginService();
+          }
+        });  
+      });
+      function loginFormCheck(){
+        let flag = true;
+        const num = document.getElementById('business_num').value;
+        const pwd = document.getElementById('password').value;
+        if(num===''){
+          alert('사번을 입력해주세요.');
+          flag = false;
+        }
+        else if(pwd===''){
+          alert('비밀번호를 입력해주세요.');
+          flag = false;
+        }
+        return flag;
+      }
+      function callLoginService(){
+        fetch('/userInfo/login/act',{
+          method: 'POST',
+          headers:{
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            business_num: document.getElementById('business_num').value,
+            password: document.getElementById('password').value
+          }),
+          redirect: 'follow'
+        })
+        .then(res => res.json())
+        .then(res => {
+          if(res.status === 200){
+            window.location.href = '/vacation/main';
+          }else{
+            alert(res.status);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="main-title">휴가 신청 시스템</div>
+      <div class="login">
+        <!-- <form action="/userInfo/login/act" method="POST" onsubmit="return loginFormCheck();"> -->
+          <div>
+            <div>
+              <input type="text" name="business_num" id="business_num" placeholder="사번" value="2010249221">
+            </div>
+            <div>
+              <input type="password" name="password" id="password" placeholder="비밀번호" value="cactus1234">
+            </div>
+            <button type="submit" id="submitBtn">로그인</button>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </body>
+</html>

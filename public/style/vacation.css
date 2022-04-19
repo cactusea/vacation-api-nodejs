@@ -1,0 +1,35 @@
+.main-box{
+  width: 700px; 
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 9px 8px 20px silver;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+}
+
+.main-menu{
+  background: -moz-linear-gradient(-45deg,  rgba(101,211,151,0.75) 0%, rgba(79,204,179,0.77) 48%, rgba(59,221,216,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(101,211,151,0.75) 0%,rgba(79,204,179,0.77) 48%,rgba(59,221,216,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(101,211,151,0.75) 0%,rgba(79,204,179,0.77) 48%,rgba(59,221,216,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf65d397', endColorstr='#cc3bddd8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  ;
+  color: white;
+  width: 75px; 
+  height: 500px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.menu-btn{
+  width: 75px;
+  height: 75px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-contents{
+  width: 625px;
+}

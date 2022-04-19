@@ -1,0 +1,31 @@
+<h1>list!</h1>
+<% if(user_name) { %>
+  <span><%=user_name%>님, 안녕하세요.</span> <br/>
+  <span>남은 연차일수: <%= remain_day %>일</span><br/> 
+<% } %>
+<span id="msg"></span>
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    getVacationList();
+  });
+
+  function getVacationList(){
+    fetch('/vacation/main/act',{
+      method:'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        dd: 'aa'
+      })
+    })
+    .then(res=>res.json())
+    .then(res=>listInfoSet(res))
+    //.then(res=>document.getElementById('msg').innerText=res.msg);
+  }
+
+  function listInfoSet(data){
+    console.dir(data);
+    document.getElementById('msg').innerText=data.msg;
+  }
+</script>

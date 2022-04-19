@@ -1,0 +1,60 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border-style: none;
+  background: none;
+  outline: 0; 
+  border-bottom: 1px solid rgba(59,221,216,0.8);
+  margin-bottom: 15px;
+}
+
+button {
+  border-style: none;
+  background: -moz-linear-gradient(-45deg,  rgba(101,211,151,0.75) 0%, rgba(79,204,179,0.77) 48%, rgba(59,221,216,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(101,211,151,0.75) 0%,rgba(79,204,179,0.77) 48%,rgba(59,221,216,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(101,211,151,0.75) 0%,rgba(79,204,179,0.77) 48%,rgba(59,221,216,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf65d397', endColorstr='#cc3bddd8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  ;
+  color: white;
+  margin-top: 10px;
+  width: 150px;
+  height: 25px;
+  outline: 0;
+}
+
+.main-box{
+  width: 350px;
+  margin: 0px auto;
+  box-shadow: 9px 8px 20px silver;
+  border-radius: 20px;
+}
+
+.main-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 25px;
+  font-weight: bolder;
+  color:white;
+  border-top-left-radius: 20px;
+  background: -moz-linear-gradient(-45deg,  rgba(101,211,151,0.75) 0%, rgba(79,204,179,0.77) 48%, rgba(59,221,216,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(101,211,151,0.75) 0%,rgba(79,204,179,0.77) 48%,rgba(59,221,216,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(101,211,151,0.75) 0%,rgba(79,204,179,0.77) 48%,rgba(59,221,216,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf65d397', endColorstr='#cc3bddd8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  ;
+}
+
+.login{
+  margin: 0px auto;
+  height: 100px;
+  padding: 20px;
+  padding-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
